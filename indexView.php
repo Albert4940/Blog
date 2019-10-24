@@ -23,7 +23,7 @@
 			<?=nl2br(htmlspecialchars($data['content']));
 			?>
 			<br/>
-			<em><a href="commentaires.php?billet=<?echo $data['id'];?>">commentaires</a></em>
+			<em><a href="index.php?id=<?echo $data['id'];?>">commentaires</a></em>
 		</p>
 	</div>
 	<?
