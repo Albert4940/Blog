@@ -7,7 +7,7 @@
 </head>
 <body>
 	<h1>Mon super blog !</h1>
-	<p><a href="index.php">Retour a la liste des billets</a></p>
+	<p><a href="../controller/index.php">Retour a la liste des billets</a></p>
 
 
 	<div class="news">
