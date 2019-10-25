@@ -1,17 +1,21 @@
 <?php
+require('controller.php');
 
-	require('model.php');
-	$posts = getPosts();
-	
-	if(isset($_GET['id']) && $_GET['id']>0)
+	if(isset($_GET['action']))
 	{
-		$post = getPost($_GET['id']);
-		$comments = getComments($_GET['id']);
-		require("postView.php");
-	}else
-	{
-		echo 'Erreur : Aucun identifiant de billet envoye ';
-	}
+		if($_GET['action'] == 'listPosts')
+		{
+			listPosts();
+		}
+		elseif($_GET['action'] == 'post')
+		{
+			if(isset($_GET['id']) && $_GET['id']>0){
+				post();
+			}else{
+				echo 'Erreur : Aucun identifiant de billet envoye ';
+			}
+		}
+	}else{
+		listPosts();
+	}	
 	
-	if(!isset($_GET['id']))
-		require('indexView.php');
