@@ -1,10 +1,10 @@
 <?php
-    require_once("tool/connexion.php");
+    require_once("model/Manager.class.php");
 
-    class CommentManager{
+    class CommentManager extends Manager{
         function getComments($postId)
         {
-            $db = dbConnect();
+            $db = $this->dbConnect();
 
             $comments = $db->prepare('SELECT id, author, comment, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments where post_id = ? ORDER BY comment_date DESC');
             $comments->execute(array($postId));
@@ -14,7 +14,7 @@
 
         function postComment($postId, $author, $comment){
 
-            $db = dbConnect();
+            $db = $this->dbConnect();
 
             $comments = $db->prepare('INSERT INTO comments (post_id, author, comment, comment_date) VALUES (?,?,?,now())');
 
