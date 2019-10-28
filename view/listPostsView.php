@@ -9,7 +9,7 @@
 	<h1>Mon super Blog</h1>
 	<p>Derniers billets du blog: </p>
 
-	<?
+	<?php
 		while($data = $posts->fetch())
 		{
 	?>
@@ -23,10 +23,10 @@
 			<?=nl2br(htmlspecialchars($data['content']));
 			?>
 			<br/>
-			<em><a href="index.php?id=<?echo $data['id'];?>&amp;action=post">commentaires</a></em>
+			<em><a href="index.php?id=<?php echo $data['id'];?>&amp;action=post">commentaires</a></em>
 		</p>
 	</div>
-	<?
+	<?php
 		}
 		$posts->closeCursor();
 	?>

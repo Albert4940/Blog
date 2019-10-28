@@ -7,7 +7,7 @@
 </head>
 <body>
 	<h1>Mon super blog !</h1>
-	<p><a href="../controller/index.php">Retour a la liste des billets</a></p>
+	<p><a href="index.php">Retour a la liste des billets</a></p>
 
 
 	<div class="news">
@@ -22,7 +22,7 @@
 		</p>
 	</div>
 	<h2>Commentaires</h2>
-	<?		
+	<?php		
 		//$req->closeCursor();
 
 		//Recuperation des commentaires
@@ -31,10 +31,10 @@
 		{
 	?>
 
-	<p><strong><?=htmlspecialchars($comment['author']);?></strong> le <?= $comment['comment_date_fr'];?></p>
+	<p><strong><?php=htmlspecialchars($comment['author']);?></strong> le <?= $comment['comment_date_fr'];?></p>
 	<p><?= nl2br(htmlspecialchars($comment['comment']));?></p>
 	<hr>
-	<?
+	<?php
 	}//Fin de la boucle des commentaires
 	//$req->closeCursor();
 	?>
