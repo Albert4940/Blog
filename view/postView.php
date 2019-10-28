@@ -3,7 +3,7 @@
 <head>
 	<title></title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="public/css/style.css">
 </head>
 <body>
 	<h1>Mon super blog !</h1>
@@ -38,5 +38,19 @@
 	}//Fin de la boucle des commentaires
 	//$req->closeCursor();
 	?>
+	<h2>Commentaires</h2>
+
+	<form action="index.php?action=addComment&amp;id=<?= $post['id']?>" method="post">
+		<div>
+			<label for="author">Auteur</label><br>
+			<input type="text" name="author" id="author">
+		</div>
+
+		<div>
+			<label for="comment"> Commentaire</label><br>
+			<textarea id="comment" name="comment"></textarea>
+		</div>
+		<input type="submit" name="">
+	</form>
 </body>
 </html>

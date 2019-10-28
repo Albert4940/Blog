@@ -3,7 +3,7 @@
 <head>
 	<title>Mon blog</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="public/css/style.css">
 </head>
 <body>
 	<h1>Mon super Blog</h1>
@@ -23,7 +23,7 @@
 			<?=nl2br(htmlspecialchars($data['content']));
 			?>
 			<br/>
-			<em><a href="../controller/index.php?id=<?echo $data['id'];?>&action='post'">commentaires</a></em>
+			<em><a href="index.php?id=<?echo $data['id'];?>&amp;action=post">commentaires</a></em>
 		</p>
 	</div>
 	<?
