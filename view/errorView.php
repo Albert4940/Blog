@@ -4,6 +4,7 @@
 	<title></title>
 </head>
 <body>
-	<?= $errorMessage;?>
+	<a href="index.php">retour a la listes des billets</a><br/>
+	<?= $message;?>
 </body>
 </html>

@@ -1,4 +1,6 @@
 <?php
+
+    namespace Albert4940\Blog\Model;
     require_once('model/Manager.class.php');
     class PostManager extends Manager{
 
